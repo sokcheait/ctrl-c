@@ -15,7 +15,7 @@ class newspaperResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'menu' => new menuResource($this->whenLoaded('menu')),
+            'name'=> $this->name,
             'id' => $this->id,
             'title'=> $this->title,
             'des' => $this->des,

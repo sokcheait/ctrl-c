@@ -53,9 +53,9 @@ class MenuController extends Controller
                 'image' => $image,
                 'status' => $request->status
             ]);
-            return Redirect::route('menus.index');
+            return Redirect::route('menus.index')->with('success', 'menu created successfully');
         }
-        return Redirect::back();
+        return Redirect::back()->with('error','menu create not successfully');
     }
 
     /**
@@ -103,7 +103,7 @@ class MenuController extends Controller
             'image'=> $image,
             'status'=> $request->status
         ]);
-        return Redirect::route('menus.index');
+        return Redirect::route('menus.index')->with('success', 'menu update successfully');
     }
 
     /**
@@ -116,6 +116,6 @@ class MenuController extends Controller
     {
         Storage::delete($menu->image);
         $menu->delete();
-        return Redirect::back();
+        return Redirect::back()->with('success', 'menu delete successfully');
     }
 }

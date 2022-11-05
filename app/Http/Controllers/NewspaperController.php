@@ -17,9 +17,18 @@ class NewspaperController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $newspapers = newspaperResource::collection(Newspaper::with('menu')->orderBy('id', 'ASC')->get());
+        $input = $request->input('search');
+        $newspapers = newspaperResource::collection(
+                        Newspaper::join('menus', 'menus.id', '=', 'newspapers.menu_id')
+                        ->when($input,function($query,$search){
+                            $query->where("menus.name","like","%$search%");
+                        })
+                        ->select('newspapers.*','menus.name')
+                        ->orderBy('id', 'ASC')
+                        ->paginate(5)
+            );
         return Inertia::render('Newspaper/Index',compact('newspapers'));
     }
 
@@ -58,9 +67,9 @@ class NewspaperController extends Controller
                 'image' => $image,
                 'status' => $request->status
             ]);
-            return Redirect::route('newspapers.index');
+            return Redirect::route('newspapers.index')->with('success', 'newspapers created successfully');
         }
-        return Redirect::back();
+        return Redirect::back()->with('error','newspapers create not successfully');
     }
 
     /**
@@ -111,7 +120,7 @@ class NewspaperController extends Controller
             'image'=> $image,
             'status'=> $request->status,
         ]);
-        return Redirect::route('newspapers.index');
+        return Redirect::route('newspapers.index')->with('success', 'newspapers update successfully');
     }
 
     /**
@@ -124,6 +133,6 @@ class NewspaperController extends Controller
     {
         Storage::delete($newspaper->image);
         $newspaper->delete();
-        return Redirect::back();
+        return Redirect::back()->with('success', 'newspapers delete successfully');
     }
 }

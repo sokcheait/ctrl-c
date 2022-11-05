@@ -8,6 +8,7 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import Notification from '@/Components/Notification.vue';
 
 defineProps({
     title: String,
@@ -35,7 +36,12 @@ const logout = () => {
         <Head :title="title" />
 
         <Banner />
-
+        <div v-if="$page.props.flash.success" class="absolute top-25 right-10 z-10">
+            <Notification :success="$page.props.flash.success" />
+        </div>
+        <div v-if="$page.props.flash.error" class="absolute top-25 right-10 z-10">
+            <Notification :error="$page.props.flash.error" />
+        </div>
         <div class="min-h-screen bg-gray-100">
             <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
