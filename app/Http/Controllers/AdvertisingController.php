@@ -16,9 +16,17 @@ class AdvertisingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $advertisings = advertisingResource::collection(Advertising::orderBy('id', 'ASC')->get());
+        $input = $request->input('search');
+        $advertisings = advertisingResource::collection(
+            Advertising::when($input,function($query,$search){
+                            $query->where("status","like","%$search%");
+                        })
+                        ->select('advertisings.*')
+                        ->orderBy('id', 'ASC')
+                        ->paginate(5)
+            );
         return Inertia::render('Advertising/Index',compact('advertisings'));
     }
 
@@ -53,9 +61,9 @@ class AdvertisingController extends Controller
                 'image' => $image,
                 'status' => $request->status
             ]);
-            return Redirect::route('advertisings.index');
+            return Redirect::route('advertisings.index')->with('success', 'advertising created successfully');
         }
-        return Redirect::back();
+        return Redirect::back()->with('error','advertising create not successfully');
     }
 
     /**
@@ -104,7 +112,7 @@ class AdvertisingController extends Controller
             'image'=> $image,
             'status'=> $request->status
         ]);
-        return Redirect::route('advertisings.index');
+        return Redirect::route('advertisings.index')->with('success', 'advertising update successfully');
     }
 
     /**
@@ -117,6 +125,6 @@ class AdvertisingController extends Controller
     {
         Storage::delete($advertising->image);
         $advertising->delete();
-        return Redirect::back();
+        return Redirect::back()->with('success', 'advertising delete successfully');
     }
 }

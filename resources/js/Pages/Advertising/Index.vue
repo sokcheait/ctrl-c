@@ -1,9 +1,20 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
+import { Inertia } from '@inertiajs/inertia';
 import { Head,Link } from '@inertiajs/inertia-vue3';
+import { ref, watch, defineProps } from 'vue';
+import Pagination from '../../Components/Pagination.vue';
 
-defineProps({
-    advertisings: Array,
+const props = defineProps({
+    advertisings: Object,
+});
+const search = ref("");
+
+watch(search, (value)=>{
+    Inertia.get('/advertisings',{ search:value },{
+        preserveState: true,
+        replace: true,
+    });
 })
 
 </script>
@@ -18,8 +29,22 @@ defineProps({
                 <Link :href="route('advertisings.create')" class="py-2 px-2 bg-blue-500 text-white rounded">Add New</Link>
             </div>
         </template>
-
-        <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-6">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="">Filter</div>
+                <div class="flex justify-end relative">
+                    <span class="absolute right-2 top-2 z-10 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </span>
+                    <input type="text" v-model="search"
+                        name="search" id="search" 
+                        class="px-2 py-1 border-gray-400 font-serif rounded-lg focus:border-gray-400 focus:ring-0" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+        <div class="py-6">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <table class="min-w-max w-full table-auto">
@@ -87,6 +112,11 @@ defineProps({
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-4">
+            <div class="flex justify-end">
+                <Pagination :advertisings="advertisings" />
             </div>
         </div>
     </AppLayout>

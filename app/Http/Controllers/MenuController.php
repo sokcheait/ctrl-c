@@ -16,9 +16,17 @@ class MenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $menus = menuResource::collection(Menu::orderBy('id', 'ASC')->get());
+        $input = $request->input('search');
+        $menus = menuResource::collection(
+                            Menu::when($input,function($query,$search){
+                            $query->where("name","like","%$search%");
+                        })
+                        ->select('menus.*')
+                        ->orderBy('id', 'ASC')
+                        ->paginate(5)
+            );
         return Inertia::render('Menu/Index',compact('menus'));
     }
 
