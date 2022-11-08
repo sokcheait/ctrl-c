@@ -23,7 +23,7 @@ class SocialController extends Controller
                             $query->where("name","like","%$search%");
                         })
                         ->select('socials.*')
-                        ->orderBy('id', 'ASC')
+                        ->orderBy('id', 'DESC')
                         ->paginate(7);
 
         return Inertia::render('Social/Index',compact('socials'));
@@ -102,7 +102,6 @@ class SocialController extends Controller
             Storage::delete($social->image);
             $image = $request->file('image')->store('socials');
         }
-
         $social->update([
             'name'=>$request->name,
             'image'=> $image,

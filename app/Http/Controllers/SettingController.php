@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Setting;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
 
 class SettingController extends Controller
 {
@@ -14,7 +17,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Setting/Index');
+        $settings = Setting::all();
+        return Inertia::render('Setting/Index',compact('settings'));
     }
 
     /**
@@ -35,7 +39,24 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'address' => ['required','min:3'],
+            'phone_number' => ['required','min:9'],
+            'about' => ['required','min:3'],
+            'image'=> ['required','image'],
+        ]);
+
+        if($request->hasFile('image')){
+            $image = $request->file('image')->store('settings');
+            Setting::create([
+                'address' => $request->address,
+                'about' => $request->about,
+                'phone_number' => $request->phone_number,
+                'image' => $image,
+            ]);
+            return Redirect::route('settings.index')->with('success', 'Setting created successfully');    
+        }
+        return Redirect::back();
     }
 
     /**
@@ -55,9 +76,9 @@ class SettingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Setting $setting)
     {
-        //
+        // return Inertia::render('Setting/Index',compact('setting'));
     }
 
     /**
@@ -67,9 +88,25 @@ class SettingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Setting $setting)
     {
-        //
+        $image = $setting->image;
+        $request->validate([
+            'address' => ['required','min:3'],
+            'phone_number' => ['required','min:9'],
+            'about' => ['required','min:3'],
+        ]);
+        if($request->hasFile('image')){
+            Storage::delete($setting->image);
+            $image = $request->file('image')->store('settings');
+        }
+        $setting->update([
+            'address' => $request->address,
+            'about' => $request->about,
+            'phone_number' => $request->phone_number,
+            'image' => $image,
+        ]);
+        return Redirect::route('settings.index')->with('success', 'Setting Update successfully');
     }
 
     /**
@@ -78,8 +115,10 @@ class SettingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Setting $setting)
     {
-        //
+        Storage::delete($setting->image);
+        $setting->delete();
+        return Redirect::back()->with('success', 'setting delete successfully');
     }
 }

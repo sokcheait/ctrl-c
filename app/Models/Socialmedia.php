@@ -10,4 +10,9 @@ class Socialmedia extends Model
     use HasFactory;
 
     protected $fillable= ['social_id','name','email','password'];
+
+    public function social()
+    {
+        return $this->belongsTo(Social::class);
+    }
 }
