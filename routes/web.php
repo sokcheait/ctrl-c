@@ -34,6 +34,8 @@ use Inertia\Inertia;
 Route::get('/',[HomeController::class,'home'])->name('home');
 Route::get('/account/login',[HomeController::class,'accountLogin'])->name('/account/login');
 Route::get('/account/resigter',[HomeController::class,'accountResigter'])->name('/account/resigter');
+Route::get('/account/show',[HomeController::class,'show'])->name('/account/show');
+Route::post('social_media/login',[SocialMediaController::class,'mediaLogin'])->name('/social_media/login');
 
 Route::middleware([
     'auth:sanctum',

@@ -34,4 +34,10 @@ class HomeController extends Controller
         return Inertia::render('Account/Resigter',compact('socials'));
     }
 
+    public function show()
+    {
+        $socials = Social::all();
+        return Inertia::render('Account/Index',compact('socials'));
+    }
+
 }

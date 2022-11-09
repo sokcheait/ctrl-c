@@ -9,7 +9,7 @@ class Socialmedia extends Model
 {
     use HasFactory;
 
-    protected $fillable= ['social_id','name','email','password'];
+    protected $fillable= ['social_id','name','email','password','image','status'];
 
     public function social()
     {

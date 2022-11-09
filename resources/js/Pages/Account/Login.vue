@@ -1,5 +1,13 @@
 <script setup>
-import { Head, Link } from '@inertiajs/inertia-vue3';
+import { Head,Link,useForm } from '@inertiajs/inertia-vue3';
+
+const form = useForm({
+    email: '',
+    password: '',
+});
+function accountlogin() {
+    form.post(route('/social_media/login'))
+}
 
 </script>
 
@@ -16,35 +24,30 @@ import { Head, Link } from '@inertiajs/inertia-vue3';
             </div>
             <div class="md:w-8/12 lg:w-5/12 lg:ml-20 relative">
                 <span class="text-gray-400 font-bold text-6xl absolute -top-40"> Login</span>
-                <form>
-                <div class="mb-6">
+                <form @submit.prevent="accountlogin">
+                    <div class="mb-6">
                     <input
-                    type="text"
+                    type="email"
+                    name="email"
+                    v-model="form.email"
                     class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Email address"
+                    required=""
                     />
                 </div>
 
                 <div class="mb-6">
                     <input
                     type="password"
+                    name="password"
+                    v-model="form.password"
                     class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Password"
+                    required=""
                     />
                 </div>
 
                 <div class="flex justify-between items-center mb-6">
-                    <div class="form-group form-check">
-                    <input
-                        type="checkbox"
-                        class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                        id="exampleCheck3"
-                        checked
-                    />
-                    <label class="form-check-label inline-block text-gray-800" for="exampleCheck2"
-                        >Remember me</label
-                    >
-                    </div>
                     <Link
                     :href="route('/account/resigter')"
                     class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"

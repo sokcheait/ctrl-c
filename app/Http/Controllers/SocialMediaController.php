@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use App\Models\Social;
+use App\Models\Socialmedia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class SocialMediaController extends Controller
 {
@@ -35,7 +39,38 @@ class SocialMediaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'social_id' => ['required'],
+            'name' => ['required','min:3'],
+            'email'=> ['required','email'],
+            'password'=> ['required','min:8'],
+        ]);
+        Socialmedia::create([
+            'social_id' => $request->social_id,
+            'name' => $request->name,
+            'email'=> $request->email,
+            'password' => Hash::make($request->password),
+            'status' => $request->status
+        ]);
+        return Redirect::route('/account/login')->with('success', 'account created successfully');
+    }
+
+    public function mediaLogin(Request $request)
+    {
+        $request->validate([
+            'email'=> ['required','email'],
+            'password'=> ['required','min:8'],
+        ]);
+
+        $socialmedia = Socialmedia::where('email','=',$request->email)->first();
+
+        if(Hash::check($request->password, $socialmedia->password)){
+
+            $request->session()->put('loginId',$socialmedia->id);
+
+            return Redirect::route('/account/show');
+        }
+
     }
 
     /**
