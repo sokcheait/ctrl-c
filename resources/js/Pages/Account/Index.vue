@@ -1,7 +1,13 @@
 <script setup>
 
+defineProps({
+    socials: Object,
+    socialmedia: Object
+})
 </script>
 
 <template>
-    <h1>Login successfully</h1>
+    <div>
+        <h1 v-if="socialmedia.social_id">Login {{ socialmedia.social_id }}successfully</h1>
+    </div>
 </template>

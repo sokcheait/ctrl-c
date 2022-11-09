@@ -61,16 +61,14 @@ class SocialMediaController extends Controller
             'email'=> ['required','email'],
             'password'=> ['required','min:8'],
         ]);
-
         $socialmedia = Socialmedia::where('email','=',$request->email)->first();
 
         if(Hash::check($request->password, $socialmedia->password)){
-
             $request->session()->put('loginId',$socialmedia->id);
-
-            return Redirect::route('/account/show');
+            if($socialmedia->social_id){
+                return Redirect::route('/account/show');
+            }
         }
-
     }
 
     /**
