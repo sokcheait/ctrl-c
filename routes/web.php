@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdvertisingController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NewspaperController;
 use App\Http\Controllers\SettingController;
@@ -21,14 +22,18 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('Home', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+
+Route::get('/',[HomeController::class,'home'])->name('home');
+Route::get('/account/login',[HomeController::class,'accountLogin'])->name('/account/login');
+Route::get('/account/resigter',[HomeController::class,'accountResigter'])->name('/account/resigter');
 
 Route::middleware([
     'auth:sanctum',
