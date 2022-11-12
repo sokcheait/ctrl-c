@@ -18,7 +18,8 @@ class SocialMediaController extends Controller
      */
     public function index()
     {
-        return Inertia::render('SocialMedia/Index');
+        $socialmedias = Socialmedia::all();
+        return Inertia::render('SocialMedia/Index',compact('socialmedias'));
     }
 
     /**

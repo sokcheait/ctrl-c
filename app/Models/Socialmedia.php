@@ -15,4 +15,13 @@ class Socialmedia extends Model
     {
         return $this->belongsTo(Social::class);
     }
+    
+    public function setSocialIdAttribute($value)
+    {
+        $this->attributes['social_id'] = json_encode($value);
+    }
+    public function getSocialIdAttribute($value)
+    {
+        $this->attributes['social_id'] = json_decode($value);
+    }
 }

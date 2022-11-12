@@ -1,12 +1,13 @@
 <script setup>
 import { Head,Link,useForm } from '@inertiajs/inertia-vue3';
+import Multiselect from '@suadelabs/vue3-multiselect'
 
 const props = defineProps({
     socials: Object,
 });
 
 const form = useForm({
-    social_id: '',
+    social_id: [],
     name: '',
     email: '',
     password: '',
@@ -66,13 +67,16 @@ function accountResigter() {
                     />
                 </div>
                 <div class="mb-6">
-                    <select name="social_id" id="social_id" v-model="form.social_id" required=""
+                    <!-- <select name="social_id[]" v-model="form.social_id" required=""
                             class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                         <option value="">---select social---</option>
                         <option v-for="social in socials" :key="social.id" :value="social.id">
                             {{ social.name }}
                         </option>
-                    </select>
+                    </select> -->
+                    <Multiselect v-model="form.social_id" name="social_id[]" :options="socials.map(type => type.name)" :multiple="true">
+                    
+                    </Multiselect>
                 </div>
 
                 <div class="flex justify-between items-center mb-6">
@@ -96,3 +100,4 @@ function accountResigter() {
         </div>
     </section>
 </template>
+<style src="@suadelabs/vue3-multiselect/dist/vue3-multiselect.css"></style>

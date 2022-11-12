@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('socialmedia', function (Blueprint $table) {
+        Schema::create('socialmedia', function (Blueprint $table) {
+            $table->id();
+            $table->text('social_id')->constrained()->cascadeOnDelete();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('image')->nullable();
             $table->boolean('status')->default(true);
+            $table->timestamps();
         });
     }
 
@@ -25,8 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('socialmedia', function (Blueprint $table) {
-            $table->dropColumn('status');
-        });
+        Schema::dropIfExists('socialmedia');
     }
 };
