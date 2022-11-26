@@ -46,7 +46,8 @@ const filterNewspaper = (name) =>{
                     >
                 </div>
                 <div class="justify-self-end">
-                    Login
+                    <Link :href="route('login')" class="text-md text-gray-700 dark:text-gray-500 underline px-4">Log in</Link>
+                    <Link :href="route('register')" class="ml-4 text-md text-gray-700 dark:text-gray-500 underline">Register</Link>
                 </div>
             </div>
         </div>

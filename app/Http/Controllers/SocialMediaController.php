@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\socialmediaResource;
 use Inertia\Inertia;
 use App\Models\Social;
 use App\Models\Socialmedia;
@@ -18,7 +19,7 @@ class SocialMediaController extends Controller
      */
     public function index()
     {
-        $socialmedias = Socialmedia::all();
+        $socialmedias = socialmediaResource::collection(Socialmedia::orderBy('id', 'DESC')->get());
         return Inertia::render('SocialMedia/Index',compact('socialmedias'));
     }
 
@@ -64,9 +65,9 @@ class SocialMediaController extends Controller
         ]);
         $socialmedia = Socialmedia::where('email','=',$request->email)->first();
 
-        if(Hash::check($request->password, $socialmedia->password)){
+        if(Hash::check($request->password, $socialmedia->password) && $socialmedia->status===true){
             $request->session()->put('loginId',$socialmedia->id);
-            if($socialmedia->social_id){
+            if($socialmedia->id){
                 return Redirect::route('/account/show');
             }
         }
@@ -103,7 +104,11 @@ class SocialMediaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $socialmedia = Socialmedia::where('id',$id)->first();
+        $socialmedia->update([
+            'status' => $request->status,
+        ]);
+        return Redirect::route('social_media.index')->with('success', 'update status successfully');
     }
 
     /**

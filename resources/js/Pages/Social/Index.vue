@@ -15,7 +15,7 @@ export default {
         props: {
             socials: Object,
         },
-        data() {
+        data() {toggle: true
             return {
                 editMode: false,
                 isOpen: false,

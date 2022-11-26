@@ -20,8 +20,8 @@ class Socialmedia extends Model
     {
         $this->attributes['social_id'] = json_encode($value);
     }
-    public function getSocialIdAttribute($value)
-    {
-        $this->attributes['social_id'] = json_decode($value);
-    }
+    // public function getSocialIdAttribute($value)
+    // {
+    //     $this->attributes['social_id'] = json_decode($value, true);
+    // }
 }
