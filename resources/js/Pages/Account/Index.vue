@@ -120,7 +120,7 @@ const toggle = ref(false);
         <div class="container mx-auto">
             <div class="grid grid-cols-4 gap-4">
                 <div class="w-full h-screen flex flex-col">
-                    <div class="h-full flex-grow-0 overflow-y-auto scrollbar-hide bg-gray-200">
+                    <div class="h-full flex-grow-0 overflow-y-auto scrollbar-hide bg-gray-100">
                         <div class="flex flex-col">
                             <div class="h-14 my-1 flex pl-2 border-b-2 border-gray-300">
                                 <div class="w-12 h-12 rounded-full bg-white bg-cover bg-center" 
@@ -387,26 +387,432 @@ const toggle = ref(false);
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
-                            <div class="h-16 bg-black my-2"></div>
+                            <div class="my-2">
+                                <div class="h-[750px] bg-gray-100 rounded-md">
+                                    <div class="flex w-full h-[60px] relative shadow-sm mb-2">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center mx-2 mt-1"
+                                            style="background-image: url('https://media.istockphoto.com/id/1371249409/photo/cropped-portrait-of-an-attractive-young-businesswoman-standing-with-her-arms-folded-in-the.jpg?b=1&s=170667a&w=0&k=20&c=iXHz8W85APhw3LlI9ip762MogOzdYea8S8RTKZf1UEA=');"
+                                        >
+                                        </div>
+                                        <div class="text-gray-800 font-mono font-bold mt-2">
+                                            <span>Vitta kim</span><br>
+                                            <span class="flex text-gray-400">
+                                                <span class="text-sm font-extralight">5hrs.</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mt-1">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-gray-600 font-bold absolute right-2 top-3 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-600 text-sm mx-2 h-[70px] overflow-hidden">
+                                        <p>Business analyst, which the IIBA (International Institute of Business Analysis) describes as “an agent of change,” statistically analyze large 
+                                            data sets to identify effective ways of boosting organizational efficiency.
+                                        </p>
+                                    </div>
+                                    <div class="h-[550px] bg-rose-400 bg-cover bg-center"
+                                        style="background-image: url('https://www.qs.com/wp-content/uploads/2016/03/shutterstock_117241084.jpg');"
+                                    >
+                                    </div>
+                                    <div class="h-[60px]">
+                                        <div class="w-full h-1/2 shadow-sm">
+                                            <ul class="list-none">
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 absolute z-10 left-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-rose-500 mt-1 absolute z-20 left-5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[3px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-yellow-400 mt-1 absolute z-30 left-9">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="w-full h-1/2">
+                                            <ul class="list-none">
+                                                <li class="float-left mx-20 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>Like</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-[150px] cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>comment</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-10 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span class="mr-1 mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>share</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2">
+                                <div class="h-[750px] bg-gray-100 rounded-md">
+                                    <div class="flex w-full h-[60px] relative shadow-sm mb-2">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center mx-2 mt-1"
+                                            style="background-image: url('https://www.thestatesman.com/wp-content/uploads/2019/05/Women-entrepreneurs.jpg');"
+                                        >
+                                        </div>
+                                        <div class="text-gray-800 font-mono font-bold mt-2">
+                                            <span>Chantha</span><br>
+                                            <span class="flex text-gray-400">
+                                                <span class="text-sm font-extralight">5hrs.</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mt-1">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-gray-600 font-bold absolute right-2 top-3 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-600 text-sm mx-2 h-[70px] overflow-hidden">
+                                        <p>Business analyst, which the IIBA (International Institute of Business Analysis) describes as “an agent of change,” statistically analyze large 
+                                            data sets to identify effective ways of boosting organizational efficiency.
+                                        </p>
+                                    </div>
+                                    <div class="h-[550px] bg-rose-400 bg-cover bg-center"
+                                        style="background-image: url('https://www.telegraph.co.uk/content/dam/business/spark/NatWest-women-in-business/women-business-high-rise-meeting-xlarge.jpg?imwidth=1200');"
+                                    >
+                                    </div>
+                                    <div class="h-[60px]">
+                                        <div class="w-full h-1/2 shadow-sm">
+                                            <ul class="list-none">
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 absolute z-10 left-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-rose-500 mt-1 absolute z-20 left-5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[3px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-yellow-400 mt-1 absolute z-30 left-9">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="w-full h-1/2">
+                                            <ul class="list-none">
+                                                <li class="float-left mx-20 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>Like</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-[150px] cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>comment</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-10 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span class="mr-1 mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>share</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2">
+                                <div class="h-[750px] bg-gray-100 rounded-md">
+                                    <div class="flex w-full h-[60px] relative shadow-sm mb-2">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center mx-2 mt-1"
+                                            style="background-image: url('https://i.pinimg.com/736x/5d/5a/bb/5d5abbb2e2345783d7d16b11732a6752.jpg');"
+                                        >
+                                        </div>
+                                        <div class="text-gray-800 font-mono font-bold mt-2">
+                                            <span>Ly Heang</span><br>
+                                            <span class="flex text-gray-400">
+                                                <span class="text-sm font-extralight">5hrs.</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mt-1">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-gray-600 font-bold absolute right-2 top-3 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-600 text-sm mx-2 h-[70px] overflow-hidden">
+                                        <p>Business analyst, which the IIBA (International Institute of Business Analysis) describes as “an agent of change,” statistically analyze large 
+                                            data sets to identify effective ways of boosting organizational efficiency.
+                                        </p>
+                                    </div>
+                                    <div class="h-[550px] bg-rose-400 bg-cover bg-center"
+                                        style="background-image: url('https://www.iiiff.com/img/0725/group-of-people-in-suits-at-table-in-meeting.jpg');"
+                                    >
+                                    </div>
+                                    <div class="h-[60px]">
+                                        <div class="w-full h-1/2 shadow-sm">
+                                            <ul class="list-none">
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 absolute z-10 left-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-rose-500 mt-1 absolute z-20 left-5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[3px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-yellow-400 mt-1 absolute z-30 left-9">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="w-full h-1/2">
+                                            <ul class="list-none">
+                                                <li class="float-left mx-20 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>Like</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-[150px] cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>comment</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-10 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span class="mr-1 mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>share</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2">
+                                <div class="h-[750px] bg-gray-100 rounded-md">
+                                    <div class="flex w-full h-[60px] relative shadow-sm mb-2">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center mx-2 mt-1"
+                                            style="background-image: url('https://images.squarespace-cdn.com/content/v1/55eb4adbe4b097dd68b32ba4/1553699796441-H1C6Q2408SX0E5MSAM70/CEO.jpg?format=1000w');"
+                                        >
+                                        </div>
+                                        <div class="text-gray-800 font-mono font-bold mt-2">
+                                            <span>Srey Nang</span><br>
+                                            <span class="flex text-gray-400">
+                                                <span class="text-sm font-extralight">5hrs.</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mt-1">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-gray-600 font-bold absolute right-2 top-3 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-600 text-sm mx-2 h-[70px] overflow-hidden">
+                                        <p>Business analyst, which the IIBA (International Institute of Business Analysis) describes as “an agent of change,” statistically analyze large 
+                                            data sets to identify effective ways of boosting organizational efficiency.
+                                        </p>
+                                    </div>
+                                    <div class="h-[550px] bg-rose-400 bg-cover bg-center"
+                                        style="background-image: url('https://www.tinypulse.com/hs-fs/hubfs/Stock%20images/Side%20view%20of%20executives%20shaking%20hands%20during%20a%20business%20meeting%20in%20the%20office-1.jpeg?width=1000&name=Side%20view%20of%20executives%20shaking%20hands%20during%20a%20business%20meeting%20in%20the%20office-1.jpeg');"
+                                    >
+                                    </div>
+                                    <div class="h-[60px]">
+                                        <div class="w-full h-1/2 shadow-sm">
+                                            <ul class="list-none">
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 absolute z-10 left-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-rose-500 mt-1 absolute z-20 left-5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[3px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left relative">
+                                                    <div class="w-[20px] h-[20px] rounded-full bg-yellow-400 mt-1 absolute z-30 left-9">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-5 text-white ml-[2px]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                                                        </svg>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="w-full h-1/2">
+                                            <ul class="list-none">
+                                                <li class="float-left mx-20 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>Like</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-[150px] cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>comment</span>
+                                                    </div>
+                                                </li>
+                                                <li class="float-left mx-10 cursor-pointer py-1">
+                                                    <div class="flex">
+                                                        <span class="mr-1 mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>share</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="">
-                    Messsage
+                <div class="w-full h-screen flex flex-col">
+                    <div class="bg-white h-full flex-grow-0 overflow-y-auto scrollbar-hide">
+                        <div class="flex flex-col">
+                            <div class="bg-pink-50 my-2 pb-2 text-rose-500 font-bold font-mono shadow-sm">
+                                Sponsored
+                            </div>
+                            <div class="w-full h-[460px] shadow-lg bg-white">
+                                <div class="my-2 w-full flex shadow-md h-[100px]">
+                                    <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
+                                        style="background-image: url('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg')"
+                                    >
+                                    </div>
+                                    <div class="w-1/2 bg-gray-100 px-2 rounded-xl text-gray-800 h-full">
+                                        <p>Just about every week seems to bring a new study that reveals an</p>
+                                    </div>
+                                </div>
+                                <div class="my-2 w-full flex shadow-md h-[100px]">
+                                    <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
+                                        style="background-image: url('https://blog.sigmaphoto.com/wp-content/uploads/2019/07/cropped-pancakes-scaled.jpg')"
+                                    >
+                                    </div>
+                                    <div class="w-1/2 bg-gray-100 px-2 rounded-xl text-gray-800 h-full">
+                                        <p>Just about every week seems to bring a new study that reveals an</p>
+                                    </div>
+                                </div>
+                                <div class="my-2 w-full flex shadow-md h-[100px]">
+                                    <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
+                                        style="background-image: url('https://img.traveltriangle.com/blog/wp-content/uploads/2018/12/cover-for-street-food-in-sydney.jpg')"
+                                    >
+                                    </div>
+                                    <div class="w-1/2 bg-gray-100 px-2 rounded-xl text-gray-800 h-full">
+                                        <p>Just about every week seems to bring a new study that reveals an</p>
+                                    </div>
+                                </div>
+                                <div class="my-2 w-full flex shadow-md h-[100px]">
+                                    <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
+                                        style="background-image: url('https://d3ldzx7fxfvsfy.cloudfront.net/kraft8x/17/1654757113314_883x1501.jpg')"
+                                    >
+                                    </div>
+                                    <div class="w-1/2 bg-gray-100 px-2 rounded-xl text-gray-800 h-full">
+                                        <p>Just about every week seems to bring a new study that reveals an</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
