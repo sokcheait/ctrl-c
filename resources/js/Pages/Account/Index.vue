@@ -770,10 +770,10 @@ const toggle = ref(false);
                 <div class="w-full h-screen flex flex-col">
                     <div class="bg-white h-full flex-grow-0 overflow-y-auto scrollbar-hide">
                         <div class="flex flex-col">
-                            <div class="bg-pink-50 my-2 pb-2 text-rose-500 font-bold font-mono shadow-sm">
+                            <div class="my-2 pb-2 text-gray-400 font-bold font-mono shadow-sm">
                                 Sponsored
                             </div>
-                            <div class="w-full h-[460px] shadow-lg bg-white">
+                            <div class="w-full h-[440px] shadow-sm bg-white overflow-y-auto scrollbar-hide">
                                 <div class="my-2 w-full flex shadow-md h-[100px]">
                                     <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
                                         style="background-image: url('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg')"
@@ -810,8 +810,123 @@ const toggle = ref(false);
                                         <p>Just about every week seems to bring a new study that reveals an</p>
                                     </div>
                                 </div>
+                                <div class="my-2 w-full flex shadow-md h-[100px]">
+                                    <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
+                                        style="background-image: url('https://d3ldzx7fxfvsfy.cloudfront.net/kraft8x/17/1654757113314_883x1501.jpg')"
+                                    >
+                                    </div>
+                                    <div class="w-1/2 bg-gray-100 px-2 rounded-xl text-gray-800 h-full">
+                                        <p>Just about every week seems to bring a new study that reveals an</p>
+                                    </div>
+                                </div>
+                                <div class="my-2 w-full flex shadow-md h-[100px]">
+                                    <div class="w-1/2 h-full bg-slate-500 bg-cover bg-center rounded-xl"
+                                        style="background-image: url('https://d3ldzx7fxfvsfy.cloudfront.net/kraft8x/17/1654757113314_883x1501.jpg')"
+                                    >
+                                    </div>
+                                    <div class="w-1/2 bg-gray-100 px-2 rounded-xl text-gray-800 h-full">
+                                        <p>Just about every week seems to bring a new study that reveals an</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="flex flex-col mt-2">
+                            <div class="my-2 pb-2 text-gray-400 font-bold font-mono shadow-sm">
+                                Birthdays
+                            </div>
+                            <div class="flex h-[80px] border-b-2 border-b-gray-200">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2424/2424914.png" 
+                                alt=""
+                                class="w-16 pb-2"
+                                >
+                                <p class="ml-2 tex-gray-500 font-mono text-md">
+                                    <b>Dara Kim</b> and 2 <b>others</b> have birthdays today
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                            <div class="shadow-sm w-full flex py-2">
+                                <div class="text-gray-400 font-bold font-mono w-[70%]">
+                                    Contancts
+                                </div>
+                                <div class="w-[30%]">
+                                    <div class="flex flex-row-reverse pt-1">
+                                        <div class="text-gray-400 mx-2 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="text-gray-400 mx-2 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full h-[200px] overflow-y-auto scrollbar-hide">
+                                <ul class="list-none">
+                                    <li class="float-left w-full my-1 flex hover:bg-gray-200 cursor-pointer">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center relative"
+                                        style="background-image: url('https://www.purebookkeeping.com/hubfs/smiling%20businesswoman.webp')"
+                                        >
+                                        <div class="w-[14px] h-[14px] absolute bg-white rounded-full bottom-0 right-1">
+                                            <div class="w-[10px] h-[10px] absolute bg-green-400 rounded-full left-[2px] top-[2px]">
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="ml-2 mt-3 text-gray-700">
+                                            SokcheaTa Moty
+                                        </div>
+                                    </li>
+                                    <li class="float-left w-full my-1 flex hover:bg-gray-200 cursor-pointer">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center relative"
+                                        style="background-image: url('https://res.cloudinary.com/highereducation/images/f_auto,q_auto/w_632,h_400,c_fill,f_auto,fl_lossy,q_auto,g_face/v1664377255/Accounting.com/GettyImages-531400560_24075a261/GettyImages-531400560_24075a261.jpg?_i=AA')"
+                                        >
+                                        <div class="w-[14px] h-[14px] absolute bg-white rounded-full bottom-0 right-1">
+                                            <div class="w-[10px] h-[10px] absolute bg-green-400 rounded-full left-[2px] top-[2px]">
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="ml-2 mt-3 text-gray-700">
+                                            SokcheaTa Moty
+                                        </div>
+                                    </li>
+                                    <li class="float-left w-full my-1 flex hover:bg-gray-200 cursor-pointer">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center relative"
+                                        style="background-image: url('http://sutlas.com/wp-content/uploads/2022/07/istockphoto-1008220810-612x612-1.jpg')"
+                                        >
+                                        <div class="w-[14px] h-[14px] absolute bg-white rounded-full bottom-0 right-1">
+                                            <div class="w-[10px] h-[10px] absolute bg-green-400 rounded-full left-[2px] top-[2px]">
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="ml-2 mt-3 text-gray-700">
+                                            SokcheaTa Moty
+                                        </div>
+                                    </li>
+                                    <li class="float-left w-full my-1 flex hover:bg-gray-200 cursor-pointer">
+                                        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-center relative"
+                                        style="background-image: url('https://miro.medium.com/max/1200/0*Eny7Zl6f4FDk79TV')"
+                                        >
+                                        <div class="w-[14px] h-[14px] absolute bg-white rounded-full bottom-0 right-1">
+                                            <div class="w-[10px] h-[10px] absolute bg-green-400 rounded-full left-[2px] top-[2px]">
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="ml-2 mt-3 text-gray-700">
+                                            SokcheaTa Moty
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
